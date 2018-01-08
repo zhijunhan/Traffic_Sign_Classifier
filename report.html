@@ -12192,6 +12192,26 @@ Number of classes = 43
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="1.-Describe-how-you-preprocessed-the-image-data.-What-techniques-were-chosen-and-why-did-you-choose-these-techniques?-Consider-including-images-showing-the-output-of-each-preprocessing-technique.-Pre-processing-refers-to-techniques-such-as-converting-to-grayscale,-normalization,-etc.-(OPTIONAL:-As-described-in-the-&quot;Stand-Out-Suggestions&quot;-part-of-the-rubric,-if-you-generated-additional-data-for-training,-describe-why-you-decided-to-generate-additional-data,-how-you-generated-the-data,-and-provide-example-images-of-the-additional-data.-Then-describe-the-characteristics-of-the-augmented-training-set-like-number-of-images-in-the-set,-number-of-images-for-each-class,-etc.)">1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)<a class="anchor-link" href="#1.-Describe-how-you-preprocessed-the-image-data.-What-techniques-were-chosen-and-why-did-you-choose-these-techniques?-Consider-including-images-showing-the-output-of-each-preprocessing-technique.-Pre-processing-refers-to-techniques-such-as-converting-to-grayscale,-normalization,-etc.-(OPTIONAL:-As-described-in-the-&quot;Stand-Out-Suggestions&quot;-part-of-the-rubric,-if-you-generated-additional-data-for-training,-describe-why-you-decided-to-generate-additional-data,-how-you-generated-the-data,-and-provide-example-images-of-the-additional-data.-Then-describe-the-characteristics-of-the-augmented-training-set-like-number-of-images-in-the-set,-number-of-images-for-each-class,-etc.)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>OpenCV grayscaling image processing technique is firstly used to process images. The reason is that the luminance is very important in distinguishing visual features, and so is it for neural network model to identify and extract factors from variant layers.</li>
+<li>Second image processing is the normalization. Image normalization is a process that re-scale the range of pixel intensity values, normalization turns out to be good for images that have poor contrast due to glare.</li>
+</ol>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
@@ -12406,7 +12426,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
@@ -12434,104 +12454,10 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Training...
-EPOCH 1 ...
-Validation accuracy = 0.561
-
-EPOCH 2 ...
-Validation accuracy = 0.754
-
-EPOCH 3 ...
-Validation accuracy = 0.834
-
-EPOCH 4 ...
-Validation accuracy = 0.866
-
-EPOCH 5 ...
-Validation accuracy = 0.893
-
-EPOCH 6 ...
-Validation accuracy = 0.908
-
-EPOCH 7 ...
-Validation accuracy = 0.915
-
-EPOCH 8 ...
-Validation accuracy = 0.918
-
-EPOCH 9 ...
-Validation accuracy = 0.937
-
-EPOCH 10 ...
-Validation accuracy = 0.935
-
-EPOCH 11 ...
-Validation accuracy = 0.941
-
-EPOCH 12 ...
-Validation accuracy = 0.946
-
-EPOCH 13 ...
-Validation accuracy = 0.952
-
-EPOCH 14 ...
-Validation accuracy = 0.953
-
-EPOCH 15 ...
-Validation accuracy = 0.954
-
-EPOCH 16 ...
-Validation accuracy = 0.953
-
-EPOCH 17 ...
-Validation accuracy = 0.959
-
-EPOCH 18 ...
-Validation accuracy = 0.957
-
-EPOCH 19 ...
-Validation accuracy = 0.958
-
-EPOCH 20 ...
-Validation accuracy = 0.963
-
-EPOCH 21 ...
-Validation accuracy = 0.961
-
-EPOCH 22 ...
-Validation accuracy = 0.966
-
-EPOCH 23 ...
-Validation accuracy = 0.962
-
-EPOCH 24 ...
-Validation accuracy = 0.964
-
-EPOCH 25 ...
-Validation accuracy = 0.965
-
-Model trained and saved.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
@@ -12629,13 +12555,30 @@ Model trained and saved.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>5 German traffic signs are:
+1). Stop
+2). Yield
+3). Turn left ahead
+4). Speed limit (60km:h)
+5). Road work</p>
+<p>The difficulty that the model would have to identy the signs may be due to the fairly low resolution.</p>
+<p>The 'Speed limit 60km/h' sign will be giving model very hard time to identify, as the main features in this sign are blended together with offering very limited distinguishing features.</p>
+<p>The 'Road work' sign could also be potentially hard to tell, as quite a few traffic signs are using the similar triangular shape.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Load-and-Output-the-Images">Load and Output the Images<a class="anchor-link" href="#Load-and-Output-the-Images">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Load the images and plot them here.</span>
@@ -12745,7 +12688,7 @@ Model trained and saved.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Convert list into numpy array</span>
@@ -12776,7 +12719,7 @@ Model trained and saved.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Run the predictions here and use the model to output the prediction for each image.</span>
@@ -12864,6 +12807,7 @@ Test picture No. 1 "s probabilities: [ 16.20388603]
 <p>Test picture No. 5 "s probabilities: [ 7.30151749]
  Predicted classes: [28]</p>
 <p>Predicted sign classes: Children crossing</p>
+<p>My classifier ends up identifying 'Turn left ahead' 'Yield' 'Stop' signs out from 5 images, so ~60% test accuracy. This is lower than test accuracy tested from test images, which is ~80%.</p>
 
 </div>
 </div>
@@ -12878,7 +12822,7 @@ Test picture No. 1 "s probabilities: [ 16.20388603]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Calculate the accuracy for these 5 new images. </span>
@@ -12969,18 +12913,18 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Print out the top five softmax probabilities for the predictions on the German traffic sign images found on the web. </span>
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
     <span class="n">saver</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">latest_checkpoint</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
-    <span class="n">test_pics_classes</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">pics_to_be_tested</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">:</span><span class="mf">1.0</span><span class="p">})</span>
-    <span class="n">sign_type_predict</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">top_k</span><span class="p">(</span><span class="n">test_pics_classes</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="nb">sorted</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
     
-<span class="nb">len</span><span class="p">(</span><span class="n">sign_type_predict</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sign_type_predict</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Test picture No.&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;&quot;s probabilities:&#39;</span><span class="p">,</span> <span class="n">sign_type_predict</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">test_pics_prob</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">),</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">pics_to_be_tested</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">:</span><span class="mf">1.0</span><span class="p">})</span>
+    <span class="n">top_5</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">top_k</span><span class="p">(</span><span class="n">test_pics_prob</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+    
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">top_5</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Test picture &quot;&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;&quot; probabilities:&#39;</span><span class="p">,</span> <span class="n">top_5</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Predicted classes:&#39;</span><span class="p">,</span> <span class="n">sign_type_predict</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
 
@@ -12998,21 +12942,69 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 
 
 <div class="output_subarea output_stream output_stdout output_text">
+<pre>[  9.47570562e-01   3.55547853e-02   1.35877877e-02   1.99505640e-03
+   2.89978372e-04]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>numpy.ndarray</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
 <pre>
- Test picture No. 1 &#34;s probabilities: [ 6.4876647   3.20483804  2.24293447  0.3244358  -1.6041851 ]
- Predicted classes: [14  0 34  4 18]
+ Test picture &#34; 1 &#34; probabilities: [  9.47570562e-01   3.55547853e-02   1.35877877e-02   1.99505640e-03
+   2.89978372e-04]
+ Predicted classes: [14]
 
- Test picture No. 2 &#34;s probabilities: [ 22.17000008   9.02630138   8.62892056   6.16824341   5.39429903]
- Predicted classes: [13  2  4 38  1]
+ Test picture &#34; 2 &#34; probabilities: [  9.99996543e-01   1.95777443e-06   1.31577735e-06   1.12337268e-07
+   5.18088470e-08]
+ Predicted classes: [13]
 
- Test picture No. 3 &#34;s probabilities: [ 19.58953285   8.57326508  -1.80505896  -1.99118149  -3.00340772]
- Predicted classes: [34 35 38 15  1]
+ Test picture &#34; 3 &#34; probabilities: [  9.99983549e-01   1.64319281e-05   5.11021891e-10   4.24235841e-10
+   1.54171148e-10]
+ Predicted classes: [34]
 
- Test picture No. 4 &#34;s probabilities: [ 6.57496357  4.07048225  2.02436328  1.17143118  0.59726882]
- Predicted classes: [ 2  1  5  4 38]
+ Test picture &#34; 4 &#34; probabilities: [ 0.90341556  0.07382529  0.00954085  0.00406596  0.00228985]
+ Predicted classes: [2]
 
- Test picture No. 5 &#34;s probabilities: [ 5.07104731  1.53806651  0.663791    0.02789893 -0.22385979]
- Predicted classes: [28 25 23 18 22]
+ Test picture &#34; 5 &#34; probabilities: [ 0.94346982  0.02756601  0.01149955  0.00608859  0.00473346]
+ Predicted classes: [28]
 </pre>
 </div>
 </div>
@@ -13090,7 +13082,7 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Visualize your network&#39;s feature maps here.</span>
